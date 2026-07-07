@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 6.5%;
+  --card-foreground: 0 0% 98%;
+  --primary: 262 83% 58%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+  --accent: 262 83% 58%;
+  --border: 0 0% 14.9%;
+}
+
+body {
+  font-feature-settings: "rlig" 1, "kern" 1;
+}
+
+/* Custom styles for AI UGC Generator */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.mode-card {
+  transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mode-card:hover {
+  transform: translateY(-2px);
+  border-color: rgb(163 163 172);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.mode-card.active {
+  border-color: rgb(147 51 234);
+  background: rgba(147, 51, 234, 0.1);
+}
+
+.generate-button {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  transition: all 0.2s ease;
+}
+
+.generate-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgb(124 58 237 / 0.3);
+}
+
+.generate-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.image-result {
+  transition: transform 0.2s ease;
+}
+
+.image-result:hover {
+  transform: scale(1.01);
+}
+
+.history-item {
+  transition: all 0.2s ease;
+}
+
+.history-item:hover {
+  transform: translateX(4px);
+}
